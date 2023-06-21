@@ -1,0 +1,19 @@
+Player1 = input("Player-1, Please enter your input, Rock/Paper/Scissor \n")
+Player2 = input("Player-2, Please enter your input, Rock/Paper/Scissor \n")
+
+if Player1 == Player2:
+    print("Match draw")
+elif (Player1 == "Rock") and (Player2 == "Paper"):
+    print("Player2 Wins")
+elif (Player1 == "Rock") and (Player2 == "Scissor"):
+    print("Player1 Wins")
+elif (Player1 == "Paper") and (Player2 == "Scissor"):
+    print("Player2 Wins")
+elif (Player1 == "Paper") and (Player2 == "Rock"):
+    print("Player1 Wins")
+elif (Player1 == "Scissor") and (Player2 == "Rock"):
+    print("Player2 Wins")
+elif (Player1 == "Scissor") and (Player2 == "Paper"):
+    print("Player1 Wins")
+else:
+    print("Wrong input, Please try again with correct input - Rock/Paper/Scissor")
