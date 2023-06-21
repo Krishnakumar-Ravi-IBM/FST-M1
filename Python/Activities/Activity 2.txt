@@ -1,0 +1,2 @@
+num = int(input("Please key in a number to identify the number is Odd or Even\n"))
+print("The number you have entered is Even") if num % 2 == 0 else print("The number you have entered is Odd")
