@@ -1,0 +1,30 @@
+# Player1 = input("Player-1, Please enter your input, Rock/Paper/Scissor \n")
+# Player2 = input("Player-2, Please enter your input, Rock/Paper/Scissor \n")
+while True:
+    Player1 = input("Player-1, Please enter your input, Rock/Paper/Scissor \n")
+    Player2 = input("Player-2, Please enter your input, Rock/Paper/Scissor \n")
+    if Player1 == Player2:
+        print("Match draw")
+    elif (Player1 == "Rock") and (Player2 == "Paper"):
+        print("Player2 Wins")
+    elif (Player1 == "Rock") and (Player2 == "Scissor"):
+        print("Player1 Wins")
+    elif (Player1 == "Paper") and (Player2 == "Scissor"):
+        print("Player2 Wins")
+    elif (Player1 == "Paper") and (Player2 == "Rock"):
+        print("Player1 Wins")
+    elif (Player1 == "Scissor") and (Player2 == "Rock"):
+        print("Player2 Wins")
+    elif (Player1 == "Scissor") and (Player2 == "Paper"):
+        print("Player1 Wins")
+    else:
+        print("Wrong input, Please try again with correct input - Rock/Paper/Scissor")
+    repPlayer1 = input("Player-1, do you want to continue the game? Y/N: ")
+    repPlayer2 = input('Player-2, do you want to continue the game? Y/N: ')
+    if repPlayer1 == repPlayer2 == "Y":
+        pass
+    elif (repPlayer1 == "N") or (repPlayer2 == "N"):
+        raise SystemExit
+    else:
+        print("Entered invalid input, System existing")
+        raise SystemError
