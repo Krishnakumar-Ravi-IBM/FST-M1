@@ -1,0 +1,10 @@
+sampleDict = {"apple": 10, "banana": 20, "cherry": 25}
+
+userInput = input("What fruit you are planning to buy? apple/banana/cherry: ")
+# x = sampleDict.get(userInput)
+
+if userInput in sampleDict:
+    # if i == userInput:
+    print("Yes,", userInput, "is available in our store")
+else:
+    print("we apologize,", userInput, "fruit is not available in our store")
