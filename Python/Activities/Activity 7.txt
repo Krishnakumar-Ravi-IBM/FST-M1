@@ -1,0 +1,8 @@
+userInput = input("Please keyin the list values with comma separated")
+list = userInput.split(",")
+# print(len(list))
+# while (len(list)):
+temp = 0
+for num in list:
+    temp += int(num)
+print(temp)
