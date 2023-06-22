@@ -1,0 +1,6 @@
+userInput = input("please end the list values by comma separating")
+list = userInput.split(",")
+if list[0] == list[-1]:
+    print("True")
+else:
+    print("False")
