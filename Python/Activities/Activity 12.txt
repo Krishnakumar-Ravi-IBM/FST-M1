@@ -1,0 +1,10 @@
+# Recursive Adder
+# num = 10
+def sumCalc(num):
+    if num <= 1:
+        return num
+    else:
+        return num + sumCalc(num - 1)
+
+
+print(sumCalc(10))
