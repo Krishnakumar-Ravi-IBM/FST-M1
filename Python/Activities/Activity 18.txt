@@ -1,0 +1,12 @@
+import pandas as pd
+
+df = pd.read_csv('../resources/activity17.csv')
+print(df)
+print("**************************************")
+print(df.Usernames)
+print("**************************************")
+print(df["Usernames"][1], df["Passwords"][1])
+print("**************************************")
+print(df.sort_values("Usernames"))
+print("**************************************")
+print(df.sort_values("Passwords", ascending=False))
