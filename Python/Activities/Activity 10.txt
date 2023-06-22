@@ -1,0 +1,7 @@
+tup = tuple(input("Enter comma separated input to tuple: ").split(","))
+# print(tup)
+# print(type(tup))
+for i in tup:
+    # print(i)
+    if int(i) % 5 == 0:
+        print(i)
