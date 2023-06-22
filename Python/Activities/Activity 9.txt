@@ -1,0 +1,23 @@
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 10]
+# list3 = list1 + list2
+# print(list3)
+mylist = []
+# mylist2 = []
+for i in list1:
+    if i % 2 != 0:
+        mylist.append(i)
+
+for i in list1:
+    if i % 2 == 0:
+        mylist.append(i)
+
+print("Resultant list is:\n", mylist)
+
+# for i in list1:
+#     mylist1.append(i)
+#     print(mylist1)
+
+# example_list = ["apple", "banana", "cherry"]
+# for item in example_list:
+#     print(item)
