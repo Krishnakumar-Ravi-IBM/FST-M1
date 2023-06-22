@@ -1,0 +1,20 @@
+def sum1(numlist):
+    sum = 0
+    for x in numlist:
+        sum += x
+    return sum
+    # return num + sum1(num - 1)
+
+
+# inpList = [10, 20, 30]
+# inpList = list(input("Enter the list elements separated by commas: ").split(","))
+lst = []
+x = int(input("enter number of elements to be fed to list: "))
+for n in range(0, x):
+    element = int(input("Please enter the list element:"))
+    lst.append(element)
+
+print("The list to be supplied to the sum function is:", lst)
+
+res = sum1(lst)
+print("The sum of all the numbers in the list supplied is:", str(res))
