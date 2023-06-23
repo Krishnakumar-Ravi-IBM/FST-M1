@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.read_excel("../resources/personDetail.xlsx")
+print("***** Datas in DataFrame *****")
+print(df) # Print the Datas in the DataFrame
+print("***** No of Rows and Columns ******")
+print(df.shape) # Print the number of rows and columns
+print("**** Printing Email Data only *****")
+print(df["Email"]) # Print the data in the emails column only
+print("****** Sort on First Name>>Asc Order *****")
+print(df.sort_values("FirstName", ascending=True)) # Sort the data based on FirstName in ascending order and print the data
