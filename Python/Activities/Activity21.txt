@@ -1,0 +1,34 @@
+import pytest
+import math
+
+
+def test_sum():
+    num1 = 50
+    num2 = 25
+    # assert math.
+    sumofnumbers = num1 + num2
+    assert sumofnumbers == 75
+
+
+def test_diff():
+    num1 = 100
+    num2 = 50
+    diff = num1 - num2
+    assert diff == 50
+
+
+def test_pdtofTwoNum():
+    # lst = [10, 5]
+    # print(math.prod(lst))
+    # assert 50 == math.prod(lst)
+    num1 = 10
+    num2 = 20
+    res = num1 * num2
+    assert res == 200
+
+
+def test_Quotofnum():
+    num1 = 10
+    num2 = 2
+    res = num1 / num2
+    assert res == 5
