@@ -1,0 +1,41 @@
+package activities;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class activity4 {
+    public static void main(String[] args) {
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        driver.get("https://training-support.net/selenium/target-practice");
+        String pgeTitle = driver.getTitle();
+        System.out.println("The Page Title is: "+pgeTitle);
+
+        WebElement thirdHeader = driver.findElement(By.xpath("//h3[@id='third-header']"));
+        String thirdHeaderText = thirdHeader.getText();
+        System.out.println("The third header text is: "+ thirdHeaderText);
+//        WebElement fifthHeader = driver.findElement(By.xpath("//h5[contains(text(), 'Fifth header')]"));
+        WebElement fifthHeader1 = driver.findElement(By.xpath("//h5[contains(@class,'green header')]"));
+        String fifthHeaderCol = fifthHeader1.getCssValue("color");
+        System.out.println(fifthHeaderCol);
+
+        WebElement btnViolet = driver.findElement(By.xpath("//button[contains(text(),'Violet')]"));
+        String btnVioletClass = btnViolet.getAttribute("class");
+        System.out.println("The Class name of Violet button is: "+btnVioletClass);
+
+        WebElement btnGrey = driver.findElement(By.xpath("//button[contains(@class,'grey')]"));
+        String btnGreyText = btnGrey.getText();
+        System.out.println("The Grey button text is: "+btnGreyText);
+        driver.quit();
+    }
+}
