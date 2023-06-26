@@ -1,0 +1,25 @@
+package activities;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class activity2 {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://training-support.net/selenium/login-form");
+        String pageTitle1 = driver.getTitle();
+        System.out.println("Page Title: "+pageTitle1);
+        WebElement usrId = driver.findElement(By.id("username"));
+        usrId.sendKeys("admin");
+        WebElement pwd = driver.findElement(By.id("password"));
+        pwd.sendKeys("password");
+        WebElement logButton = driver.findElement(By.xpath("//button[contains(@class,'button')]"));
+        logButton.click();
+        Thread.sleep(2000);
+        driver.quit();
+    }
+}
