@@ -1,0 +1,47 @@
+package activities;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
+
+public class activity22 {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        Actions builder = new Actions(driver);
+
+        driver.get("https://www.training-support.net/selenium/popups");
+        String pgeTit = driver.getTitle();
+        System.out.println("The Page Title is: "+pgeTit);
+        WebElement signin = driver.findElement(By.xpath("//button[text()='Sign In']"));
+        builder.moveToElement(signin).build().perform();
+        String toolTip = signin.getAttribute("data-tooltip");
+        System.out.println("The Tool Tip text is: "+toolTip);
+
+        signin.click();
+        WebElement uname = driver.findElement(By.id("username"));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username"));
+        wait.until(ExpectedConditions.visibilityOf(uname));
+        uname.sendKeys("admin");
+        WebElement pwd = driver.findElement(By.id("password"));
+        pwd.sendKeys("password");
+//        WebElement btnLogin1 = driver.findElement(By.className("green"));
+        WebElement btnLogin = driver.findElement(By.xpath("//button[text()='Log in']"));
+        btnLogin.click();
+        WebElement actConfirm = driver.findElement(By.id("action-confirmation"));
+        String confirmMsg = actConfirm.getText();
+        System.out.println("The Confirmation message is: "+confirmMsg);
+        driver.quit();
+    }
+}
