@@ -20,7 +20,7 @@ public class CRM_activity2 {
         }
 
         @Test
-        public void testMethod(){
+        public void headerImageURL(){
                 String pgeTitle = driver.getTitle();
                 System.out.println("The Page Title is: "+pgeTitle);
 //                WebElement logo = driver.findElement(By.tagName("src"));
