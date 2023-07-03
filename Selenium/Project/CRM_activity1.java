@@ -17,7 +17,7 @@ public class CRM_activity1 {
         }
 
         @Test
-        public void testMethod(){
+        public void websiteTitle(){
                 String pgeTitle = driver.getTitle();
                 System.out.println("The Page Title is: "+pgeTitle);
                 Assert.assertEquals(pgeTitle,"SuiteCRM");
