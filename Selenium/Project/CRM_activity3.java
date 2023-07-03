@@ -19,7 +19,7 @@ public class CRM_activity3 {
         }
 
         @Test
-        public void testMethod(){
+        public void copyrightText(){
                 String pgeTitle = driver.getTitle();
                 System.out.println("The Page Title is: "+pgeTitle);
                 WebElement Copyright1 = driver.findElement(By.id("admin_options"));
