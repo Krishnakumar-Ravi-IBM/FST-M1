@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite_Activity4">
+    <test thread-count="4" name="Test_Activity4">
+        <classes>
+            <class name="Activity4_suiteExample.activity4_DemoOne">
+            <methods>
+                <include name="firstTestCase"/>
+                <include name="secondTestCase"/>
+            </methods>
+            </class>
+            <class name="Activity4_suiteExample.activity4_DemoTwo" />
+        </classes>
+    </test>
+</suite>
