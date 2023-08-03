@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.667">
+    <testcase classname="Testing with Tags" name="Test for Simple Alert" time="8.48">
+        <system-out><![CDATA[Given User is on the page...................................................passed
+When User clicks the Simple Alert button....................................passed
+Then Alert opens............................................................passed
+And Read the text from it and print it......................................passed
+And Close the alert.........................................................passed
+And Close Browser...........................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
