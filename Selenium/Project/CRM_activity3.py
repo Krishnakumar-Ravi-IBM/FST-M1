@@ -18,7 +18,7 @@ with webdriver.Firefox(service=service) as driver:
     # Print the title of the page
     print("Page title is: ", driver.title)
 
-    Copyright1 = driver.find_element(By.ID("admin_options"))
+    Copyright1 = driver.find_element(By.ID, "admin_options")
     copyrightText = Copyright1.text
     print("The first copyright text in the footer is: \""+copyrightText+"\"")
 
