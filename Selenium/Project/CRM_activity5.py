@@ -18,17 +18,18 @@ with webdriver.Firefox(service=service) as driver:
     # Print the title of the page
     print("Page title is: ", driver.title)
 
-    txtUname = driver.find_element(By.ID("user_name"))
-    txtPwd = driver.find_element(By.ID("username_password"))
-    btnLogin = driver.find_element(By.ID("bigbutton"))
+    txtUname = driver.find_element(By.ID, "user_name")
+    txtPwd = driver.find_element(By.ID, "username_password")
+    btnLogin = driver.find_element(By.ID, "bigbutton")
     txtUname.send_keys("admin")
     txtPwd.send_keys("pa$$w0rd")
     btnLogin.click()
+    
     pgeHome = driver.title
     print("The homePage title is: " + pgeHome)
     assert pgeHome == "SuiteCRM"
 
-    navMenu = driver.findElement(By.ID("toolbar"))
+    navMenu = driver.findElement(By.ID, "toolbar")
     navMenuColor = navMenu.value_of_css_property("Color")
     print("The Color of the Navigation Menu bar is: "+navMenuColor)
 
