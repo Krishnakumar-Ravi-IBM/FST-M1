@@ -18,7 +18,7 @@ with webdriver.Firefox(service=service) as driver:
     # Print the title of the page
     print("Page title is: ", driver.title)
 
-    logo1 = driver.find_element(By.XPATH("//img[@alt='SuiteCRM']"))
+    logo1 = driver.find_element(By.XPATH, "//img[@alt='SuiteCRM']")
     strLogo = logo1.get_attribute("src")
     print("The URL of the Header Image is: "+strLogo)
     # assert driver.title == "SuiteCRM"
