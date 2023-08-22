@@ -18,12 +18,13 @@ with webdriver.Firefox(service=service) as driver:
     # Print the title of the page
     print("Page title is: ", driver.title)
 
-    txtUname = driver.find_element(By.ID("user_name"))
-    txtPwd = driver.find_element(By.ID("username_password"))
-    btnLogin = driver.find_element(By.ID("bigbutton"))
+    txtUname = driver.find_element(By.ID, "user_name")
+    txtPwd = driver.find_element(By.ID, "username_password")
+    btnLogin = driver.find_element(By.ID, "bigbutton")
     txtUname.send_keys("admin")
     txtPwd.send_keys("pa$$w0rd")
     btnLogin.click()
+    
     pgeHome = driver.title
     print("The homePage title is: " + pgeHome)
     assert pgeHome == "SuiteCRM"
